@@ -7,7 +7,7 @@ const { RegistrationModel, BookingModel } = require("./Schema");
 
 const app = express();
 
-app.use( cors() );
+app.use(cors());
 app.use(bodyParser.json());
 
 connectDb();
@@ -16,9 +16,6 @@ app.get("/health", (req, res) => {
     res.send("Server is Healthly");
 });
 
-app.get("/connectdb", (req, res) => {
-    res.send("Response is sent");
-});
 
 app.post("/registeruser", async (req, res) => {
     const { username, password, address, phonenumber, email } = req.body;
