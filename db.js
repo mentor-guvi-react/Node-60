@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const dburl = `mongodb+srv://mentorguvi:AsG5HtQYGlXeB4m4@cluster0.njlmlrq.mongodb.net/`
+const dburl = process.env.NODE_ENV_DB_URL;
 
 const connectDb = async () => {
 
